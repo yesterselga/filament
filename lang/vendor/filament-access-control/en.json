@@ -1,0 +1,7 @@
+{
+     "super-admin": "Super Admin",
+     "admin-users.update": "Admin Users → Edit",
+     "permissions.update": "Permissions → Edit",
+     "customers.view": "Customers → View",
+     "branch.view": "Branch → View"
+}
