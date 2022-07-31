@@ -1,7 +1,10 @@
 {
      "super-admin": "Super Admin",
+     "admin": "Admin",
+     "writer": "Writer",
+     "branch-manager": "Branch Manager",
+     "employee": "Employee",
+     "department-head": "Department Head",
      "admin-users.update": "Admin Users → Edit",
-     "permissions.update": "Permissions → Edit",
-     "customers.view": "Customers → View",
-     "branch.view": "Branch → View"
+     "permissions.update": "Permissions → Edit"
 }

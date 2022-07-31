@@ -42,7 +42,7 @@ class BranchPolicy
       */
      public function create(FilamentUser $user)
      {
-          //
+          return $user->can('branch.create');
      }
 
      /**
@@ -54,7 +54,7 @@ class BranchPolicy
       */
      public function update(FilamentUser $user, Branch $branch)
      {
-          //
+          return $user->can('branch.edit');
      }
 
      /**
@@ -66,7 +66,7 @@ class BranchPolicy
       */
      public function delete(FilamentUser $user, Branch $branch)
      {
-          //
+          return $user->can('branch.delete');
      }
 
      /**
