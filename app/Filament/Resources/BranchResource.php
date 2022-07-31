@@ -92,8 +92,8 @@ class BranchResource extends Resource
           ]);
 
           $t->actions([
-               Tables\Actions\EditAction::make(),
-               Tables\Actions\DeleteAction::make(),
+               Tables\Actions\EditAction::make()->visible(fn (Branch $record): bool => auth()->user()->can('branch.edit', $record)),
+               Tables\Actions\DeleteAction::make()->visible(fn (Branch $record): bool => auth()->user()->can('branch.delete', $record)),
           ])->bulkActions([
                Tables\Actions\DeleteBulkAction::make(),
           ]);
