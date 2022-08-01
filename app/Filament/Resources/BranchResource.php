@@ -92,8 +92,12 @@ class BranchResource extends Resource
           ]);
 
           $t->actions([
-               Tables\Actions\EditAction::make()->visible(fn (Branch $record): bool => auth()->user()->can('branch.edit', $record)),
-               Tables\Actions\DeleteAction::make()->visible(fn (Branch $record): bool => auth()->user()->can('branch.delete', $record)),
+               Tables\Actions\EditAction::make()->visible(fn (Branch $record): bool => auth()->user()->can('branch.edit', $record))->after(function (Branch $record) {
+                    activity()->log('Updated branch ' . $record->id);
+               }),
+               Tables\Actions\DeleteAction::make()->visible(fn (Branch $record): bool => auth()->user()->can('branch.delete', $record))->after(function (Branch $record) {
+                    activity()->log('Deleted branch ' . $record->id);
+               }),
           ])->bulkActions([
                Tables\Actions\DeleteBulkAction::make(),
           ]);
