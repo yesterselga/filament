@@ -6,6 +6,7 @@ use App\Filament\Resources\BranchResource\Pages;
 use App\Filament\Resources\BranchResource\RelationManagers;
 use App\Models\Branch;
 use Filament\Forms;
+use Filament\Notifications\Notification;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
@@ -92,12 +93,16 @@ class BranchResource extends Resource
           ]);
 
           $t->actions([
-               Tables\Actions\EditAction::make()->visible(fn (Branch $record): bool => auth()->user()->can('branch.edit', $record))->after(function (Branch $record) {
-                    activity()->log('Updated branch ' . $record->id);
-               }),
-               Tables\Actions\DeleteAction::make()->visible(fn (Branch $record): bool => auth()->user()->can('branch.delete', $record))->after(function (Branch $record) {
-                    activity()->log('Deleted branch ' . $record->id);
-               }),
+               Tables\Actions\EditAction::make()
+                    ->visible(fn (Branch $record): bool => auth()->user()->can('branch.edit', $record))
+                    ->after(function (Branch $record) {
+                         activity()->log('Updated branch ' . $record->id);
+                    }),
+               Tables\Actions\DeleteAction::make()
+                    ->visible(fn (Branch $record): bool => auth()->user()->can('branch.delete', $record))
+                    ->after(function (Branch $record) {
+                         activity()->log('Deleted branch ' . $record->id);
+                    }),
           ])->bulkActions([
                Tables\Actions\DeleteBulkAction::make(),
           ]);

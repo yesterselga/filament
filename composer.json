@@ -12,6 +12,7 @@
           "chiiya/filament-access-control": "^1.4",
           "doctrine/dbal": "^3.3",
           "filament/filament": "^2.14",
+          "filament/notifications": "^2.15",
           "filament/spatie-laravel-settings-plugin": "^2.15",
           "guzzlehttp/guzzle": "^7.2",
           "laravel/framework": "^9.19",
