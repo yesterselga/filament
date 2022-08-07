@@ -6,5 +6,5 @@ use Filament\Widgets\Widget;
 
 class ProductOverview extends Widget
 {
-    protected static string $view = 'filament.resources.product-resource.widgets.product-overview';
+     protected static string $view = 'filament.resources.product-resource.widgets.product-overview';
 }

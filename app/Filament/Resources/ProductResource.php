@@ -4,6 +4,8 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\ProductResource\Pages;
 use App\Filament\Resources\ProductResource\RelationManagers;
+use App\Filament\Resources\ProductResource\Widgets\ProductOverview;
+use App\Filament\Resources\ProductResource\Widgets\ProductSalesOverview;
 use App\Models\Product;
 use Filament\Forms;
 use Filament\Forms\Components\Card;
@@ -28,7 +30,7 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 class ProductResource extends Resource
 {
      protected static ?string $model = Product::class;
-
+     protected static ?string $recordTitleAttribute = 'name';
      protected static ?string $navigationIcon = 'heroicon-o-collection';
 
      public static function form(Form $form): Form
@@ -93,6 +95,19 @@ class ProductResource extends Resource
                'index' => Pages\ListProducts::route('/'),
                'create' => Pages\CreateProduct::route('/create'),
                'edit' => Pages\EditProduct::route('/{record}/edit'),
+          ];
+     }
+
+     public static function getGloballySearchableAttributes(): array
+     {
+          return ['name', 'category'];
+     }
+
+     public static function getWidgets(): array
+     {
+          return [
+               ProductOverview::class,
+               ProductSalesOverview::class,
           ];
      }
 }

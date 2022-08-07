@@ -20,6 +20,7 @@ class BranchResource extends Resource
 {
      protected static ?string $model = Branch::class;
      protected static ?string $navigationIcon = 'heroicon-o-map';
+     protected static ?string $recordTitleAttribute = 'name';
      protected static function getNavigationBadge(): ?string
      {
           return static::getModel()::count();
@@ -120,5 +121,10 @@ class BranchResource extends Resource
                'index' => Pages\ManageBranches::route('/'),
                'sort' => Pages\SortBranch::route('/sort'),
           ];
+     }
+
+     public static function getGloballySearchableAttributes(): array
+     {
+          return ['name', 'city'];
      }
 }
