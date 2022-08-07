@@ -12,5 +12,3 @@ const user = {
      lastName: "Davis",
      role: "Professor",
 }
-
-console.log(user.name)
