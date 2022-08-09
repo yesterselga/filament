@@ -14,7 +14,8 @@ return [
     */
 
      'defaults' => [
-          'guard' => 'filament',
+          'guard' => 'web',
+          //'guard' => 'filament',
           'passwords' => 'users',
      ],
 

@@ -10,7 +10,7 @@ class CustomerPolicy
 {
      use HandlesAuthorization;
 
-     public function viewAny(FilamentUser $user)
+     public function viewAny(User $user)
      {
           return $user->can('customer.view');
      }

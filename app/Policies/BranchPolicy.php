@@ -17,7 +17,7 @@ class BranchPolicy
       * @param  \App\Models\User  $user
       * @return \Illuminate\Auth\Access\Response|bool
       */
-     public function viewAny(FilamentUser $user)
+     public function viewAny(User $user)
      {
           return $user->can('branch.view');
      }
@@ -29,7 +29,7 @@ class BranchPolicy
       * @param  \App\Models\Branch  $branch
       * @return \Illuminate\Auth\Access\Response|bool
       */
-     public function view(FilamentUser $user, Branch $branch)
+     public function view(User $user, Branch $branch)
      {
           return $user->can('branch.view');
      }
@@ -40,7 +40,7 @@ class BranchPolicy
       * @param  \App\Models\User  $user
       * @return \Illuminate\Auth\Access\Response|bool
       */
-     public function create(FilamentUser $user)
+     public function create(User $user)
      {
           return $user->can('branch.create');
      }
@@ -52,7 +52,7 @@ class BranchPolicy
       * @param  \App\Models\Branch  $branch
       * @return \Illuminate\Auth\Access\Response|bool
       */
-     public function update(FilamentUser $user, Branch $branch)
+     public function update(User $user, Branch $branch)
      {
           return $user->can('branch.edit');
      }
@@ -64,7 +64,7 @@ class BranchPolicy
       * @param  \App\Models\Branch  $branch
       * @return \Illuminate\Auth\Access\Response|bool
       */
-     public function delete(FilamentUser $user, Branch $branch)
+     public function delete(User $user, Branch $branch)
      {
           return $user->can('branch.delete');
      }
@@ -76,7 +76,7 @@ class BranchPolicy
       * @param  \App\Models\Branch  $branch
       * @return \Illuminate\Auth\Access\Response|bool
       */
-     public function restore(FilamentUser $user, Branch $branch)
+     public function restore(User $user, Branch $branch)
      {
           //
      }
@@ -88,7 +88,7 @@ class BranchPolicy
       * @param  \App\Models\Branch  $branch
       * @return \Illuminate\Auth\Access\Response|bool
       */
-     public function forceDelete(FilamentUser $user, Branch $branch)
+     public function forceDelete(User $user, Branch $branch)
      {
           //
      }

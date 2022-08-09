@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\User;
 use Chiiya\FilamentAccessControl\Database\Seeders\FilamentAccessControlSeeder;
 use Chiiya\FilamentAccessControl\Models\FilamentUser;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -82,10 +83,9 @@ class PermissionsSeeder extends Seeder
                ->givePermissionTo('customers.view');
 
           // create sa user
-          $user = FilamentUser::query()->create(
+          $user = User::query()->create(
                [
-                    'first_name' => 'Yester',
-                    'last_name' => 'Selga',
+                    'name' => 'Yester Selga',
                     'email' => 'yesterselga@gmail.com',
                     'password' => Hash::make('password'),
                ]

@@ -85,10 +85,10 @@ return [
     */
 
      'auth' => [
-          'guard' => env('FILAMENT_AUTH_GUARD', 'filament'),
+          'guard' => env('FILAMENT_AUTH_GUARD', 'web'),
           'pages' => [
-               //'login' => \Filament\Http\Livewire\Auth\Login::class,
-               'login' => \Chiiya\FilamentAccessControl\Http\Livewire\Login::class,
+               'login' => \Filament\Http\Livewire\Auth\Login::class,
+               //'login' => \Chiiya\FilamentAccessControl\Http\Livewire\Login::class,
           ],
      ],
 
