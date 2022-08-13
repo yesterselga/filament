@@ -22,13 +22,14 @@ class ListProducts extends ListRecords
      protected function getHeaderWidgets(): array
      {
           return [
-               ProductOverview::class,
+
                ProductSalesOverview::class,
+
           ];
      }
 
      protected function getFooterWidgets(): array
      {
-          return [];
+          return [ProductOverview::class,];
      }
 }

@@ -103,11 +103,11 @@ class ProductResource extends Resource
           return ['name', 'category'];
      }
 
-     public static function getWidgets(): array
-     {
-          return [
-               ProductOverview::class,
-               ProductSalesOverview::class,
-          ];
-     }
+     // public static function getWidgets(): array
+     // {
+     //      return [
+     //           ProductOverview::class,
+     //           ProductSalesOverview::class,
+     //      ];
+     // }
 }
