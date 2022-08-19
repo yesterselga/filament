@@ -1,3 +1,157 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.divider {
+     height: 20px;
+}
+
+.category-heading {
+     font-size: 22px;
+     font-weight: bold;
+}
+
+ul.nav {
+     white-space: nowrap;
+     overflow-x: auto;
+}
+
+ul.nav li {
+     display: inline-block !important;
+     float: none;
+}
+
+.product {
+     margin: 18px 0;
+}
+
+.product .name {
+     font-weight: bold;
+}
+
+.product .price {
+     font-weight: 400;
+}
+
+.product .quantity {
+     font-weight: 400;
+     float: right;
+}
+
+.product .description {
+     font-size: 15px;
+     color: gray;
+}
+
+.product-image {
+     border: solid rgb(187, 187, 187) 1px;
+     border-radius: 4px;
+}
+
+div.scrollmenu {
+     background-color: #f26625;
+     overflow: auto;
+     white-space: nowrap;
+}
+
+div.scrollmenu a {
+     display: inline-block;
+     color: white;
+     text-align: center;
+     padding: 14px;
+     text-decoration: none;
+     font-weight: bold;
+}
+
+div.scrollmenu a:hover {
+     background-color: rgb(253, 184, 54);
+}
+
+.btn-option {
+     display: block;
+     width: 100%;
+     margin: 10px 0;
+     background: #f26625;
+     color: white;
+}
+
+.btn-option .fa {
+     display: block;
+     font-size: 24px;
+     color: white;
+}
+
+.modal-title {
+     font-weight: bold;
+     font-size: 18px;
+     margin-bottom: 15px;
+}
+
+.no-padding {
+     padding: 0;
+}
+
+.bottom-action {
+     background: #f26625;
+     color: white;
+}
+
+.modal-fullscreen {
+     padding: 0 !important;
+}
+
+.modal-fullscreen .modal-dialog {
+     width: 100%;
+     max-width: none;
+     height: 100%;
+     margin: 0;
+}
+
+.modal-fullscreen .modal-content {
+     height: 100%;
+     border: 0;
+     border-radius: 0;
+}
+
+.modal-fullscreen .modal-body {
+     overflow-y: auto;
+}
+
+.requests .request {
+     padding: 8px;
+     margin: 10px 0;
+}
+
+.requests .left {
+     background: orange;
+     margin-left: 30px;
+}
+
+.requests .right {
+     background: silver;
+     margin-right: 30px;
+}
+
+.request .time {
+     font-size: 14px;
+}
+
+.request .seen {
+     font-size: 12px;
+     float: right;
+}
+
+
+.badge {
+     background-color: #f26625;
+     float: right;
+}
+
+.group {
+     margin-bottom: 1px solid silver;
+}
+
+.group .name {
+     padding: 6px 0;
+
+}

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Livewire\Chat;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,21 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
      return view('welcome');
 });
+
+Route::get('/order', function () {
+     return view('order');
+});
+
+Route::get('/dine', function () {
+     return view('dine');
+});
+
+Route::get('/test', function () {
+     echo 'hello world';
+});
+
+Route::get('/chat', Chat::class);
+
+Route::get('/service', function () {
+     return view('service');
+})->middleware('auth');
